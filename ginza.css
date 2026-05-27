@@ -1,0 +1,690 @@
+/* Responsive Ginza CSS - fixed overlap bugs */
+::selection {
+  background-color: #fad001;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lora', 'Libre Caslon Text', 'Acme', serif;
+  color: #4a4a43;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.grid-container {
+  width: min(1200px, 100% - 32px);
+  margin-inline: auto;
+}
+
+/* Header */
+.header-section {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  width: 100%;
+  padding: 18px 0;
+}
+
+.header-section .grid-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-section .logo img {
+  width: 160px;
+  height: auto;
+}
+
+.header-section nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 34px);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+
+.header-section nav ul li.active {
+  text-decoration: underline;
+}
+
+/* Shared buttons */
+.button a {
+  display: inline-block;
+  min-width: 170px;
+  padding: 13px 22px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* Landing */
+.landing-section {
+  min-height: 760px;
+  background-image: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=3840,fit=crop/dossenbach0a5yk/main2-A0xK3w5v20ulGZKB.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+}
+
+.landing-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.landing-section .box-one {
+  grid-column: 3 / 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.landing-section .box-one p,
+.qualifications-section .box p,
+.schedule-section .box p,
+.testimonials-section .box p,
+.blog-section .box p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.landing-section .box-one p span {
+  display: block;
+}
+
+.landing-section .box-one h1 {
+  margin: 0;
+  font-size: clamp(54px, 7vw, 100px);
+  line-height: .95;
+  color: #4a4a43;
+  font-weight: 400;
+}
+
+/* Section titles */
+.qualifications-section,
+.schedule-section,
+.testimonials-section,
+.blog-section {
+  padding: clamp(56px, 8vw, 110px) 0;
+}
+
+.qualifications-section .box,
+.schedule-section .box,
+.testimonials-section .box,
+.blog-section .box {
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+
+.qualifications-section .box h2,
+.schedule-section .box h2,
+.testimonials-section .box h2,
+.blog-section .box h2 {
+  margin: 0;
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.12;
+  font-weight: 400;
+}
+
+/* Methods */
+.psychoanalysis-section {
+  padding: 0 0 clamp(56px, 8vw, 110px);
+}
+
+.psychoanalysis-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(22px, 4vw, 48px);
+}
+
+.psychoanalysis-section .box-1,
+.psychoanalysis-section .box-2,
+.psychoanalysis-section .box-3,
+.psychoanalysis-section .box-4 {
+  min-width: 0;
+}
+
+.psychoanalysis-section .img {
+  margin-bottom: 18px;
+}
+
+.psychoanalysis-section .img img {
+  height: 48px;
+}
+
+.psychoanalysis-section h5 {
+  font-size: clamp(21px, 2vw, 24px);
+  line-height: 1.25;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.psychoanalysis-section p {
+  color: #4a4a43;
+  line-height: 1.65;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Service blocks */
+.individual-section,
+.grouptherapy-section,
+.couples-section,
+.online-section {
+  overflow: hidden;
+}
+
+.individual-section,
+.grouptherapy-section,
+.couples-section,
+.blog-section,
+.blog-list-section,
+.blog-space {
+  background-color: #f3f3f2;
+}
+
+.online-section,
+.schedule-section {
+  background-color: #878780;
+}
+
+.individual-section .grid-container,
+.grouptherapy-section .grid-container,
+.couples-section .grid-container,
+.online-section .grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, .8fr);
+  align-items: stretch;
+  min-height: 640px;
+}
+
+.grouptherapy-section .grid-container,
+.online-section .grid-container {
+  grid-template-columns: minmax(340px, .8fr) minmax(0, 1.2fr);
+}
+
+.individual-section .left-img,
+.couples-section .left-img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.individual-section .box,
+.couples-section .box {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.grouptherapy-section .box,
+.online-section .box {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.grouptherapy-section .right-img,
+.online-section .right-img {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.left-img img,
+.right-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  object-fit: cover;
+}
+
+.individual-section .box,
+.grouptherapy-section .box,
+.couples-section .box,
+.online-section .box {
+  width: min(520px, 100%);
+  margin: auto;
+  padding: clamp(48px, 7vw, 90px) 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(22px, 4vw, 42px);
+  text-align: center;
+}
+
+.individual-section .box p,
+.grouptherapy-section .box p,
+.couples-section .box p,
+.online-section .box p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.individual-section .box p span,
+.grouptherapy-section .box p span,
+.couples-section .box p span,
+.online-section .box p span {
+  display: block;
+}
+
+.individual-section .box h2,
+.grouptherapy-section .box h2,
+.couples-section .box h2,
+.online-section .box h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 56px);
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.individual-section .box h2 span,
+.grouptherapy-section .box h2 span,
+.couples-section .box h2 span,
+.online-section .box h2 span {
+  display: block;
+}
+
+.individual-section .box h4,
+.grouptherapy-section .box h4,
+.couples-section .box h4,
+.online-section .box h4 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.25;
+  font-weight: 400;
+  color: #5b5b5b;
+}
+
+.online-section .box,
+.online-section .box h2,
+.online-section .box h4,
+.online-section .box p,
+.online-section .button a,
+.schedule-section .box {
+  color: #fff;
+}
+
+/* Testimonials slide */
+.slide-section {
+  padding: 56px 0 42px;
+}
+
+.slide-section .grid-container {
+  display: grid;
+  grid-template-columns: 42px repeat(2, minmax(0, 1fr)) 42px;
+  gap: clamp(24px, 5vw, 70px);
+  align-items: center;
+}
+
+.slide-section .box-1,
+.slide-section .box-2 {
+  line-height: 1.7;
+}
+
+.slide-section .box-1 { grid-column: 2; }
+.slide-section .box-2 { grid-column: 3; }
+.slide-section .left-arrow { grid-column: 1; grid-row: 1; }
+.slide-section .right-arrow { grid-column: 4; grid-row: 1; }
+
+.slide-section .left-arrow,
+.slide-section .right-arrow {
+  color: #878780;
+  font-size: 28px;
+  text-align: center;
+}
+
+.slide-section .bullets {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slide-section .bullets span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background-color: #878780;
+}
+
+.slide-section .bullets span:first-child {
+  background-color: #1a1a1a;
+}
+
+/* Blog */
+.blog-list-section {
+  padding: clamp(38px, 6vw, 70px) 0;
+}
+
+.blog-list-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 5vw, 60px);
+}
+
+.blog-list-section .box-1,
+.blog-list-section .box-2 {
+  display: grid;
+  gap: 11px;
+}
+
+.blog-list-section img {
+  width: 100%;
+  height: clamp(240px, 28vw, 354px);
+  object-fit: cover;
+}
+
+.blog-list-section p,
+.blog-list-section h3 {
+  margin: 0;
+}
+
+.blog-list-section h3 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.blog-space .grid-container {
+  height: 60px;
+}
+
+/* Footer */
+.footer-section {
+  background-color: #4a4a43;
+  padding: clamp(36px, 5vw, 58px) 0;
+  color: #fff;
+}
+
+.footer-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  align-items: start;
+  text-align: center;
+}
+
+.footer-section .box-1 .img img {
+  height: 30px;
+  margin-inline: auto;
+}
+
+.footer-section h5,
+.footer-section p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.footer-section h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer-section .box-3 p a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .grid-container {
+    width: min(100% - 28px, 760px);
+  }
+
+  .header-section {
+    position: relative;
+    background-color: #f3f3f2;
+  }
+
+  .landing-section {
+    min-height: auto;
+    padding: 80px 0;
+    background-position: 62% center;
+  }
+
+  .landing-section .box-one {
+    grid-column: 1 / 8;
+  }
+
+  .psychoanalysis-section .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .individual-section .grid-container,
+  .grouptherapy-section .grid-container,
+  .couples-section .grid-container,
+  .online-section .grid-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .individual-section .left-img,
+  .grouptherapy-section .right-img,
+  .couples-section .left-img,
+  .online-section .right-img,
+  .individual-section .box,
+  .grouptherapy-section .box,
+  .couples-section .box,
+  .online-section .box {
+    grid-column: 1;
+  }
+
+  .individual-section .left-img,
+  .grouptherapy-section .right-img,
+  .couples-section .left-img,
+  .online-section .right-img {
+    grid-row: 1;
+  }
+
+  .individual-section .box,
+  .grouptherapy-section .box,
+  .couples-section .box,
+  .online-section .box {
+    grid-row: 2;
+  }
+
+  .left-img img,
+  .right-img img {
+    min-height: 0;
+    height: clamp(320px, 58vw, 520px);
+  }
+
+  .slide-section .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .slide-section .box-1 { grid-column: 1; }
+  .slide-section .box-2 { grid-column: 2; }
+  .slide-section .left-arrow,
+  .slide-section .right-arrow {
+    display: none;
+  }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+  .grid-container {
+    width: min(100% - 24px, 560px);
+  }
+
+  .header-section .grid-container {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .header-section .logo img {
+    width: 145px;
+  }
+
+  .header-section nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+    font-size: 13px;
+  }
+
+  .landing-section {
+    padding: 70px 0;
+    background-position: 70% center;
+  }
+
+  .landing-section .grid-container {
+    display: block;
+  }
+
+  .landing-section .box-one {
+    width: min(100%, 430px);
+    margin-inline: auto;
+    padding: 28px 18px;
+    background: rgba(243, 243, 242, .78);
+    border-radius: 2px;
+  }
+
+  .landing-section .box-one h1 {
+    font-size: clamp(42px, 14vw, 64px);
+  }
+
+  .qualifications-section,
+  .schedule-section,
+  .testimonials-section,
+  .blog-section {
+    padding: 48px 0;
+  }
+
+  .qualifications-section .box h2,
+  .schedule-section .box h2,
+  .testimonials-section .box h2,
+  .blog-section .box h2 {
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .psychoanalysis-section .grid-container,
+  .blog-list-section .grid-container,
+  .footer-section .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .psychoanalysis-section .box-1,
+  .psychoanalysis-section .box-2,
+  .psychoanalysis-section .box-3,
+  .psychoanalysis-section .box-4 {
+    text-align: center;
+  }
+
+  .psychoanalysis-section .img img {
+    margin-inline: auto;
+  }
+
+  .individual-section .box,
+  .grouptherapy-section .box,
+  .couples-section .box,
+  .online-section .box {
+    width: 100%;
+    padding: 44px 22px;
+    gap: 22px;
+  }
+
+  .individual-section .box h2,
+  .grouptherapy-section .box h2,
+  .couples-section .box h2,
+  .online-section .box h2 {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  .left-img img,
+  .right-img img {
+    height: 300px;
+  }
+
+  .slide-section .grid-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .slide-section .box-1,
+  .slide-section .box-2,
+  .slide-section .bullets {
+    grid-column: 1;
+  }
+
+  .slide-section .box-1,
+  .slide-section .box-2 {
+    text-align: center;
+  }
+
+  .blog-list-section img {
+    height: 260px;
+  }
+
+  .footer-section .grid-container {
+    gap: 26px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .grid-container {
+    width: min(100% - 20px, 390px);
+  }
+
+  .button a {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .landing-section .box-one {
+    padding: 24px 14px;
+  }
+
+  .landing-section .box-one h1 {
+    font-size: 38px;
+  }
+
+  .schedule-section .box h2 {
+    font-size: 32px;
+    overflow-wrap: anywhere;
+  }
+
+  .left-img img,
+  .right-img img {
+    height: 250px;
+  }
+}

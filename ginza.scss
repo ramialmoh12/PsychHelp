@@ -1,0 +1,13 @@
+$container-max-width: 1260px;
+$gutter: 45px;
+
+$container-width-without-gutters: $container-max-width - ($gutter * 11); // 1260px - 495px = 765px
+$column-max-width: (
+    $container-width-without-gutters / 12
+); // 765px / 12 columns =  63.75px
+
+.grid-container {
+    display: grid;
+    grid-template-columns: [outer-left] 1fr [grid-start] repeat(12, [col-start] minmax(0, $column-max-width)) [grid-end] 1fr [outer-right];
+    column-gap: $gutter;
+}
